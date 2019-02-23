@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants, Location, Permissions } from 'expo'
-import { MapView } from 'expo'
+import { MapView, Constants, Location, Permissions } from 'expo'
+import { Marker } from 'react-native-maps'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -30,6 +30,12 @@ export default class App extends React.Component {
 
 
   render() {
+    const marker = {
+      latlng: {latitude: 37.78825, longitude: -122.4324,},
+      title: 'Gamer town',
+      description: 'Fuck Scoobert L Doobert'
+    }
+
     return (
       <MapView
           style={{ flex: 1 }}
@@ -38,8 +44,13 @@ export default class App extends React.Component {
             longitude: -122.4324,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
-          }}
-      />
+          }}>
+        <Marker
+            coordinate={marker.latlng}
+            title={marker.title}
+            description={marker.description}
+        />
+      </MapView>
     );
   }
 }
