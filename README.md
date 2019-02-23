@@ -2,7 +2,7 @@
 Our project for HackIllinois 2019.
 
 ## Group Members
+Evan Armstrong
 Shaan Patel  
-Nathan Somers  
-Evan Armstrong  
+Nathan Somers    
 Jack Henhapl
