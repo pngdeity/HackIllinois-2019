@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MapView, Constants, Location, Permissions } from 'expo'
-import { Marker } from 'react-native-maps'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -12,7 +11,6 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    // this.setState({location: "30., 45."})
     this.getLocationAsync()
   }
 
@@ -45,7 +43,7 @@ export default class App extends React.Component {
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}>
-        <Marker
+        <MapView.Marker
             coordinate={marker.latlng}
             title={marker.title}
             description={marker.description}
